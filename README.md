@@ -5,11 +5,15 @@ A cross-platform CLI tool to paint your GitHub contribution graph green. Generat
 ## Installation
 
 ```bash
-# Use directly with npx (no install needed)
-npx commit-bot --help
+# Install directly from GitHub (recommended)
+npm install -g github:go3-14/commit_bot
 
-# Or install globally
-npm install -g commit-bot
+# Or clone and set up manually
+git clone https://github.com/go3-14/commit_bot.git
+cd commit_bot
+npm install
+npm run build
+npm link
 ```
 
 **Requirements:** Node.js 16+ and Git installed on your system.
