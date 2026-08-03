@@ -1,0 +1,35 @@
+{
+  "name": "commit-bot",
+  "version": "1.0.0",
+  "description": "Paint your GitHub contribution graph green 🟩 — a cross-platform CLI tool",
+  "main": "dist/index.js",
+  "bin": {
+    "commit-bot": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": [
+    "github",
+    "commits",
+    "contribution-graph",
+    "cli",
+    "git",
+    "green-squares"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^12.1.0",
+    "date-fns": "^4.1.0",
+    "ora": "^5.4.1",
+    "simple-git": "^3.27.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  }
+}
