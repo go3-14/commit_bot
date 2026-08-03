@@ -130,7 +130,24 @@ commit-bot pattern --shape star --year 2024 --intensity max
 | `high`    | 5                |
 | `max`     | 10               |
 
-### `fill` : Fill Entire Year
+### `image` — Render Image to ASCII 🖼️
+
+Convert any image (logos, pixel art, silhouettes) directly onto your contribution graph.
+
+![commit-bot image to ascii art](giffy2.gif)
+
+```bash
+# Render a logo in binary mode (crisp edges, black & white)
+commit-bot image -f logo.png --mode binary --threshold 128
+
+# Render pixel art in grayscale mode (uses all 5 green levels)
+commit-bot image -f mario.png --mode grayscale --year 2024
+
+# Invert colors (useful if image is white on black background)
+commit-bot image -f symbol.png --invert
+```
+
+### `fill` — Fill Entire Year
 
 Blanket an entire year with commits for a solid green wall.
 

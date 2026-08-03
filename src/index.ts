@@ -8,6 +8,7 @@ import { registerRandomCommand } from './commands/random';
 import { registerPatternCommand } from './commands/pattern';
 import { registerFillCommand } from './commands/fill';
 import { registerWipeCommand } from './commands/wipe';
+import { registerImageCommand } from './commands/image';
 
 const program = new Command();
 
@@ -28,6 +29,7 @@ Examples:
   $ commit-bot pattern --text "HI" --year 2024    # Write "HI" on the 2024 graph
   $ commit-bot pattern --shape heart --year 2024  # Draw a heart on the 2024 graph
   $ commit-bot fill --year 2024                   # Solid green wall for 2024
+  $ commit-bot image -f logo.png --year 2024       # Render an image on the graph
   $ commit-bot wipe --confirm                     # Reset and start over
 `
   );
@@ -38,6 +40,7 @@ registerRangeCommand(program);
 registerRandomCommand(program);
 registerPatternCommand(program);
 registerFillCommand(program);
+registerImageCommand(program);
 registerWipeCommand(program);
 
 program.parse(process.argv);
