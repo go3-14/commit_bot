@@ -14,7 +14,7 @@ A cross-platform CLI tool for generating backdated Git commits — fill specific
 
 ---
 
-## 🎬 Demo
+##  Demo
 
 <!-- Replace the path below with your actual GIF -->
 ![commit-bot demo](YOUR_GIF_HERE.gif)
@@ -23,7 +23,7 @@ A cross-platform CLI tool for generating backdated Git commits — fill specific
 
 ---
 
-## 📦 Installation
+##  Installation
 
 ```bash
 # Install directly from GitHub (recommended)
@@ -47,7 +47,7 @@ npm link
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```bash
 # 1. Create a new repo and make 5 commits on a specific date
