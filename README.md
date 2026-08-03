@@ -16,8 +16,7 @@ A cross-platform CLI tool for generating backdated Git commits — fill specific
 
 ##  Demo
 
-<!-- Replace the path below with your actual GIF -->
-![commit-bot demo](YOUR_GIF_HERE.gif)
+![commit-bot demo](giffy.gif)
 
 > *Write text, draw shapes, fill years, scatter random commits — all from your terminal.*
 
@@ -63,6 +62,8 @@ commit-bot date -d 2024-03-15 -n 5 --push
 ---
 
 ##  Commands
+
+> 💡 For a complete reference of all flags, syntax, and advanced permutations, check out [**`COMMANDS.md`**](COMMANDS.md).
 
 ### `date` — Single Date
 
