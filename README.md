@@ -62,7 +62,7 @@ commit-bot date -d 2024-03-15 -n 5 --push
 
 ---
 
-## 📖 Commands
+##  Commands
 
 ### `date` — Single Date
 
@@ -147,7 +147,7 @@ commit-bot wipe --confirm --push
 
 ---
 
-## ⚙️ Global Options
+##  Global Options
 
 These flags work with **all** commands:
 
@@ -165,7 +165,7 @@ These flags work with **all** commands:
 
 ---
 
-## 🔧 How It Works
+##  How It Works
 
 Git allows setting custom dates for commits via `GIT_AUTHOR_DATE` and `GIT_COMMITTER_DATE` environment variables. commit-bot automates the process:
 
@@ -176,9 +176,9 @@ Git allows setting custom dates for commits via `GIT_AUTHOR_DATE` and `GIT_COMMI
 
 GitHub counts these commits toward your contribution graph as long as:
 
-- ✅ The commit email matches your **verified GitHub email**
-- ✅ The repository is **not a fork**
-- ✅ The commits are on the **default branch**
+-  The commit email matches your **verified GitHub email**
+-  The repository is **not a fork**
+-  The commits are on the **default branch**
 
 ---
 
