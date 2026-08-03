@@ -195,6 +195,6 @@ GitHub counts these commits toward your contribution graph as long as:
 
 ---
 
-## 📄 License
+##  License
 
 MIT — do whatever you want with it.
