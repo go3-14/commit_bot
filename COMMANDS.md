@@ -174,7 +174,47 @@ commit-bot pattern --shape smiley --year 2025 --init --repo ./art-repo --push
 
 ---
 
-## 6. `fill` — Solid Year Wall
+## 6. `image` — Image to ASCII Art Rendering
+
+Render images (like logos or pixel art) directly onto the contribution graph by converting image pixels to GitHub commits.
+
+### Rendering Modes
+- `grayscale`: Maps image brightness to the 5 GitHub green intensity levels. Best for pixel art and shaded images.
+- `binary`: Strict on/off pixel mapping using a threshold. Best for crisp logos and silhouettes.
+
+### Options
+- `--file`, `-f <path>`: Path to the image file (required).
+- `--year <YYYY>`: Target year.
+- `--mode <grayscale|binary>`: Rendering mode (default: `grayscale`).
+- `--width <number>`: Max width in weeks (1-53, default: 52).
+- `--invert`: Invert brightness (dark becomes light and vice versa).
+- `--threshold <0-255>`: Brightness cutoff for binary mode (default: 128).
+- `--offset <number>`: Week offset from the start of the year (default: 0).
+
+### Syntax
+```bash
+commit-bot image -f <path_to_image> [options]
+```
+
+### Permutations & Examples
+
+```bash
+# 1. Preview a logo rendering with binary thresholding
+commit-bot image -f logo.png --mode binary --threshold 150 --dry-run
+
+# 2. Render shaded pixel art for a specific year
+commit-bot image -f mario.png --mode grayscale --year 2024
+
+# 3. Render an inverted image (white foreground on black background)
+commit-bot image -f apple_logo.png --mode binary --invert
+
+# 4. Limit width to 20 weeks and add a 5 week offset
+commit-bot image -f small_icon.png --width 20 --offset 5
+```
+
+---
+
+## 7. `fill` — Solid Year Wall
 
 Blanket an entire year (Jan 1 – Dec 31) with commits to create a solid green activity wall.
 
@@ -201,7 +241,7 @@ commit-bot fill --year 2023 --repo ./year-wall --init --push
 
 ---
 
-## 7. `wipe` — Repository Reset
+## 8. `wipe` — Repository Reset
 
 Destructively clear bot commits and reinitialize the repository. Requires `--confirm` as a safety guard.
 
@@ -236,4 +276,5 @@ commit-bot wipe --confirm --repo ./my-old-repo --push --branch main
 | **Quick 1-liner test repo** | `commit-bot date -d 2025-01-01 -n 5 --init --repo ./test-repo --push` |
 | **Realistic weekday activity** | `commit-bot random -n 250 --days 365 --weekdays-only` |
 | **High contrast text** | `commit-bot pattern --text "CODE" --year 2024 --intensity max` |
+| **Render a logo** | `commit-bot image -f logo.png --mode binary --threshold 128` |
 | **Reset everything** | `commit-bot wipe --confirm --push` |
